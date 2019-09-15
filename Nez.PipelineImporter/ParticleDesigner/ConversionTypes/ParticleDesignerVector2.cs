@@ -7,18 +7,16 @@ namespace Nez.ParticleDesignerImporter
 {
 	public class ParticleDesignerVector2
 	{
-		[XmlAttribute]
-		public float x;
+		[XmlAttribute("x")] public float X;
 
-		[XmlAttribute]
-		public float y;
+		[XmlAttribute("y")] public float Y;
 
 
-		public static implicit operator Vector2( ParticleDesignerVector2 pdvec )
+		public static implicit operator Vector2(ParticleDesignerVector2 pdvec)
 		{
-			return new Vector2( pdvec.x, pdvec.y );
+			return new Vector2(pdvec.X, pdvec.Y);
 		}
 
-	}
+        public override string ToString() => $"{X}, {Y}";
+    }
 }
-

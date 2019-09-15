@@ -6,15 +6,14 @@ namespace Nez.ParticleDesignerImporter
 {
 	public class ParticleDesignerFloatValue
 	{
-		[XmlAttribute]
-		public float value;
+		[XmlAttribute("value")] public float Value;
 
 
-		public static implicit operator float( ParticleDesignerFloatValue obj )
+		public static implicit operator float(ParticleDesignerFloatValue obj)
 		{
-			return obj.value;
+			return obj.Value;
 		}
 
-	}
+        public override string ToString() => Value.ToString();
+    }
 }
-

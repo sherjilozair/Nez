@@ -1,16 +1,12 @@
-﻿using System;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 
 
 namespace Nez.ParticleDesignerImporter
 {
 	public class ParticleDesignerTexture
 	{
-		[XmlAttribute]
-		public string name;
+		[XmlAttribute("name")] public string Name;
 
-		[XmlAttribute]
-		public string data;
-	}
+		[XmlAttribute("data")] public string Data;
+    }
 }
-

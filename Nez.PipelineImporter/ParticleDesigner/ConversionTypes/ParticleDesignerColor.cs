@@ -7,24 +7,20 @@ namespace Nez.ParticleDesignerImporter
 {
 	public class ParticleDesignerColor
 	{
-		[XmlAttribute]
-		public float red;
+		[XmlAttribute("red")] public float Red;
 
-		[XmlAttribute]
-		public float green;
+		[XmlAttribute("green")] public float Green;
 
-		[XmlAttribute]
-		public float blue;
+		[XmlAttribute("blue")] public float Blue;
 
-		[XmlAttribute]
-		public float alpha;
+		[XmlAttribute("alpha")] public float Alpha;
 
 
-		public static implicit operator Color( ParticleDesignerColor obj )
+		public static implicit operator Color(ParticleDesignerColor obj)
 		{
-			return new Color( obj.red, obj.green, obj.blue, obj.alpha );
+			return new Color(obj.Red, obj.Green, obj.Blue, obj.Alpha);
 		}
 
-	}
+        public override string ToString() => $"{Red}, {Green}, {Blue}, {Alpha}";
+    }
 }
-
